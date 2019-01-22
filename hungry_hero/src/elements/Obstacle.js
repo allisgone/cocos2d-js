@@ -100,7 +100,7 @@ var Obstacle = cc.Sprite.extend({
 });
 
 Obstacle.create = function(type, showLookOut, position, speed, distance){
-    if(cc.pool.hasObj(Obstacle)) {
+    if(cc.pool.hasObject(Obstacle)) {//源代码 cc.pool.hasObj(Obstacle)
         return cc.pool.getFromPool(Obstacle, type, showLookOut, position, speed, distance);
     }
     else{

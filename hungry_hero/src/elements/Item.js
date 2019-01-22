@@ -28,7 +28,7 @@ var Item = cc.Sprite.extend({
 });
 
 Item.create = function(type){
-    if(cc.pool.hasObj(Item)) {
+    if(cc.pool.hasObject(Item)) {//源代码为 cc.pool.hasObj(Item)
         return cc.pool.getFromPool(Item, type);
     }
     else{
